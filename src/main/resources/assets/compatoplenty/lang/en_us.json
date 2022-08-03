@@ -211,5 +211,9 @@
   "block.compatoplenty.orange_autumn_hedge": "Orange Autumn Leaf Hedge",
   "block.compatoplenty.yellow_autumn_leaf_carpet": "Yellow Autumn Leaf Carpet",
   "block.compatoplenty.yellow_autumn_hedge": "Yellow Autumn Leaf Hedge",
-  "block.compatoplenty.mud_brick_vertical_slab": "Mud Brick Vertical Slab"
+  "block.compatoplenty.mud_brick_vertical_slab": "Mud Brick Vertical Slab",
+
+  "item.compatoplenty.black_sandpaper": "Black Sand Paper",
+  "item.compatoplenty.orange_sandpaper": "Orange Sand Paper",
+  "item.compatoplenty.white_sandpaper": "White Sand Paper"
 }

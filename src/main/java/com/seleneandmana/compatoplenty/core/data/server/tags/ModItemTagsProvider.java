@@ -5,6 +5,8 @@ import com.seleneandmana.compatoplenty.core.CompatOPlenty;
 
 import com.seleneandmana.compatoplenty.core.other.CompatTags;
 import com.seleneandmana.compatoplenty.core.registry.CompatBlocks;
+import com.seleneandmana.compatoplenty.core.registry.CompatItems;
+import com.simibubi.create.AllTags;
 import com.teamabnormals.blueprint.common.block.chest.BlueprintChestBlock;
 import com.teamabnormals.blueprint.common.block.chest.BlueprintTrappedChestBlock;
 import net.minecraft.data.DataGenerator;
@@ -183,6 +185,12 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 asItem(CompatBlocks.POLISHED_ROSE_QUARTZ_BRICK_VERTICAL_SLAB),
 
                 asItem(CompatBlocks.MUD_BRICK_VERTICAL_SLAB)
+        );
+
+        tag(AllTags.AllItemTags.SANDPAPER.tag).add(
+                CompatItems.BLACK_SANDPAPER.get(),
+                CompatItems.ORANGE_SANDPAPER.get(),
+                CompatItems.WHITE_SANDPAPER.get()
         );
     }
 

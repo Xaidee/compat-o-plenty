@@ -201,5 +201,9 @@
   "block.compatoplenty.orange_autumn_hedge": "Живая ограда из оранжевых осенних листьев",
   "block.compatoplenty.yellow_autumn_leaf_carpet": "Ковёр из жёлтых осенних листьев",
   "block.compatoplenty.yellow_autumn_hedge": "Живая ограда из жёлтых осенних листьев",
-  "block.compatoplenty.mud_brick_vertical_slab": "Кирпичная вертикальная плита из грязи"
+  "block.compatoplenty.mud_brick_vertical_slab": "Кирпичная вертикальная плита из грязи",
+
+  "item.compatoplenty.black_sandpaper": "Черная наждачная бумага",
+  "item.compatoplenty.orange_sandpaper": "Оранжевая наждачная бумага",
+  "item.compatoplenty.white_sandpaper": "Белая наждачная бумага"
 }

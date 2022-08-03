@@ -6,6 +6,12 @@ import com.mojang.datafixers.util.Pair;
 import com.seleneandmana.compatoplenty.core.CompatOPlenty;
 import com.seleneandmana.compatoplenty.core.registry.CompatBlocks;
 import com.seleneandmana.compatoplenty.core.registry.CompatItems;
+import com.simibubi.create.AllItems;
+import com.simibubi.create.AllRecipeTypes;
+import com.simibubi.create.content.contraptions.processing.ProcessingRecipeBuilder;
+import com.simibubi.create.content.curiosities.tools.SandPaperPolishingRecipe;
+import com.simibubi.create.foundation.data.recipe.CreateRecipeProvider;
+import com.simibubi.create.foundation.data.recipe.PolishingRecipeGen;
 import com.teamabnormals.blueprint.common.block.chest.BlueprintChestBlock;
 import com.teamabnormals.blueprint.common.block.chest.BlueprintTrappedChestBlock;
 import com.teamabnormals.blueprint.core.api.conditions.QuarkFlagRecipeCondition;
@@ -259,6 +265,11 @@ public class ModRecipeProvider extends RecipeProvider {
         tableRecipe(BOPBlocks.UMBRAN_SLAB, BOPBlocks.UMBRAN_FENCE, CompatBlocks.UMBRAN_TABLE.get(), consumer);
         tableRecipe(BOPBlocks.PALM_SLAB, BOPBlocks.PALM_FENCE, CompatBlocks.PALM_TABLE.get(), consumer);
         tableRecipe(BOPBlocks.HELLBARK_SLAB, BOPBlocks.HELLBARK_FENCE, CompatBlocks.HELLBARK_TABLE.get(), consumer);
+
+        //Sandpaper
+        sandpaperRecipe(BOPBlocks.BLACK_SAND, CompatItems.BLACK_SANDPAPER.get(), consumer);
+        sandpaperRecipe(BOPBlocks.ORANGE_SAND, CompatItems.ORANGE_SANDPAPER.get(), consumer);
+        sandpaperRecipe(BOPBlocks.WHITE_SAND, CompatItems.WHITE_SANDPAPER.get(), consumer);
 
         /*
         Stonecutting
@@ -525,6 +536,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .addCondition(new ModLoadedCondition(modId))
                 .addRecipe(consumer1 -> ShapedRecipeBuilder.shaped(result).define('#', slab).pattern("#").pattern("#").unlockedBy(getHasName(slab), has(slab)).save(consumer1))
                 .build(consumer, new ResourceLocation(CompatOPlenty.MOD_ID, "crafting/" + getItemName(result)));
+    }
+
+    public static void sandpaperRecipe(ItemLike sand, ItemLike sandpaper, Consumer<FinishedRecipe> consumer) {
+        ConditionalRecipe.builder()
+                .addCondition(new ModLoadedCondition(CompatOPlenty.CREATE_ID))
+                .addRecipe(consumer1 -> ShapelessRecipeBuilder.shapeless(sandpaper).requires(Items.PAPER).requires(sand).unlockedBy(getHasName(sand), has(sand)).save(consumer1))
+                .build(consumer, new ResourceLocation(CompatOPlenty.MOD_ID, "crafting/" + getItemName(sandpaper)));
     }
 
     public static void quarkFlagStoneCutterRecipe(ItemLike material, ItemLike result, int amount, String flag, Consumer<FinishedRecipe> consumer) {

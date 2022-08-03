@@ -30,6 +30,8 @@ public class CompatOPlenty
     public static final String TWIGS_ID = "twigs";
     public static final String FARMERS_ID = "farmersdelight";
 
+    public static final String CREATE_ID = "create";
+
 
     public static final Logger LOGGER = LogManager.getLogger();
     public static final RegistryHelper REGISTRY_HELPER = RegistryHelper.create(MOD_ID, helper -> {
